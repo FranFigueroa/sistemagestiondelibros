@@ -1,0 +1,10 @@
+Proyecto: Biblioteca Digital
+Descripción
+
+Construir una API RESTful para gestionar una biblioteca de libros. Los usuarios pueden:
+
+    Crear, leer, actualizar y eliminar libros.
+    Buscar libros por título, autor o género.
+    Registrar usuarios y autenticar con tokens JWT.
+    Ver el historial de préstamos de un usuario.
+    Marcar libros como "prestados" o "devueltos".
