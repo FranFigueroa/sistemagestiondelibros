@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+
+# Entorno
+.env
+.env.*
+
+# Docker
+docker-compose.override.yml
+docker-compose.override.yaml
+*.bak
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos temporales
+tmp/
+*.tmp
+*.temp
+~$
+
+# Otros
+dist/
+build/
+coverage/

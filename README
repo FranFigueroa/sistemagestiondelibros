@@ -7,4 +7,21 @@ Construir una API RESTful para gestionar una biblioteca de libros. Los usuarios 
     Buscar libros por título, autor o género.
     Registrar usuarios y autenticar con tokens JWT.
     Ver el historial de préstamos de un usuario.
-    Marcar libros como "prestados" o "devueltos".
+    Marcar libros como "prestados" o "devueltos"
+
+
+Requisitos:
+	Gestion de usuarios:
+		Registro de usuarios
+		Inicio de sesion con autentificacion
+
+	Gestion de libros:
+		Operaciones CRUD
+		Estado de libros
+
+	Gestion de prestamos:
+		Registrar y controlar prestamos de libros
+		Registrar devoluciones
+		Historial de prestamos
+
+.
