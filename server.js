@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const connectDB = require('./config/database');
+const booksRouter = require('./routes/books');
 
 connectDB();
 
@@ -29,3 +30,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log('Server running at port:${PORT}');
 });
+
+app.use('/books', booksRouter);
