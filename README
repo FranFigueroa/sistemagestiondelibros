@@ -1,27 +1,26 @@
-Proyecto: Biblioteca Digital
-Descripción
+# **Sistema de Gestión de Libros**
 
-Construir una API RESTful para gestionar una biblioteca de libros. Los usuarios pueden:
+Este proyecto es una **API RESTful** para la gestión de libros, que permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre una base de datos MongoDB. Actualmente, incluye validación de datos para garantizar la calidad de la información ingresada.
 
-    Crear, leer, actualizar y eliminar libros.
-    Buscar libros por título, autor o género.
-    Registrar usuarios y autenticar con tokens JWT.
-    Ver el historial de préstamos de un usuario.
-    Marcar libros como "prestados" o "devueltos"
+---
+
+## **Características Implementadas**
+- Operaciones CRUD para libros:
+  - **GET /books**: Listar todos los libros.
+  - **GET /books/:id**: Obtener un libro específico por ID.
+  - **POST /books**: Crear un nuevo libro.
+  - **PUT /books/:id**: Actualizar un libro existente.
+  - **DELETE /books/:id**: Eliminar un libro por ID.
+- Validación de datos en los endpoints `POST` y `PUT` utilizando **Joi**.
+- Conexión a MongoDB mediante **Mongoose**.
+- API desarrollada con **Node.js** y **Express**.
+- Configuración con **Docker** para facilitar el despliegue.
+
+---
+
+## **Requisitos**
+1. **Node.js**: Versión 16 o superior.
+2. **Docker**: Para ejecutar los servicios en contenedores.
+3. **Postman o curl**: Para probar los endpoints.
 
 
-Requisitos:
-	Gestion de usuarios:
-		Registro de usuarios
-		Inicio de sesion con autentificacion
-
-	Gestion de libros:
-		Operaciones CRUD
-		Estado de libros
-
-	Gestion de prestamos:
-		Registrar y controlar prestamos de libros
-		Registrar devoluciones
-		Historial de prestamos
-
-.
