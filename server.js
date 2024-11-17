@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const connectDB = require('./config/database');
 const booksRouter = require('./routes/books');
+const errorHandler = require('./middlewares/errorHandler');
 
 connectDB();
 
@@ -31,4 +32,8 @@ app.listen(PORT, () => {
     console.log('Server running at port:${PORT}');
 });
 
+// Rutas
 app.use('/books', booksRouter);
+
+// Manejo de errores
+app.use(errorHandler);

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Book = require('../models/Book');
+const validateBook = require('../middlewares/validateBook');
 
 // GET all books
 
@@ -25,8 +26,19 @@ router.get('/', async (req, res) => {
     }
 })
 
-// PUT /books/:id: Actualizar un libro por ID
-router.put('/:id', async (req, res) => {
+// Post
+router.post('/', validateBook, async (req, res) => {
+  const book = new Book(req.body);
+  try {
+    const newBook = await book.save();
+    res.status(201).json(newBook);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Put
+router.put('/:id', validateBook, async (req, res) => {
   try {
     const updatedBook = await Book.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
